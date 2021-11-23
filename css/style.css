@@ -1,0 +1,377 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Header Start */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: #030303;
+  position: fixed;
+  width: 100%;
+}
+
+.nav-bar > ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+li a,
+.dropbtn {
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.nav-bar ul > li {
+  margin-left: 1.5rem;
+}
+
+.nav-search {
+  margin-right: 1.5rem;
+  outline: none;
+  background-image: url(/images/search-solid.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 1.9rem;
+  border: none;
+  padding: 0.5rem 0.32rem;
+  text-align: center;
+  border-radius: 0.32rem;
+}
+.nav-search:focus {
+  width: 600px;
+  box-shadow: 8px 8px;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  padding: 14px 16px;
+  background-color: lightgray;
+  color: #030303;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #030303;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: lightgray;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Header Start */
+
+/* Dummy div to prevent overlapping as ther navbaris fixed */
+.dummy-div {
+  height: 70px;
+}
+
+/* Hero Image Start */
+.hero-container {
+  width: 100%;
+  margin: auto;
+}
+
+.hero-image img {
+  height: 100vh;
+  width: 100%;
+}
+
+.shows {
+  position: absolute;
+  top: 50%;
+  color: #fafafa;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-left: 1.5rem;
+  padding: 1rem 2rem;
+  width: 600px;
+}
+
+.shows-heading,
+.shows-text {
+  text-transform: capitalize;
+}
+
+.shows-heading {
+  font-size: 3rem;
+}
+
+.shows-text {
+  margin: 0.32rem 0;
+}
+
+.shows-cta {
+  background-color: #030303;
+  color: #fafafa;
+  padding: 0.75rem 1.5rem;
+  text-transform: capitalize;
+  font-size: 1.125rem;
+  border: none;
+  box-shadow: 8px 8px 8px 0 #fafafa;
+}
+
+.shows-cta:hover {
+  transform: scaleX(1.2);
+}
+/* Hero Image End */
+
+/* Band Introduction Start */
+
+.band-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #fafafa;
+  padding: 5rem 0;
+}
+
+.band-introduction {
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.band-introduction > h1 {
+  font-size: 3rem;
+}
+
+.band-introduction > * {
+  margin: 0.5rem 0;
+}
+
+.band-info {
+  width: 1000px;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.info-image {
+  flex: 1;
+  box-shadow: 8px 8px rgba(0, 0, 0, 0.9);
+}
+
+.info-image > img {
+  width: 100%;
+}
+
+.desc {
+  padding: 1rem;
+  color: #030303;
+  font-weight: 500;
+}
+
+/* Tour Section Start */
+.tour-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  background-color: #030303;
+  color: #fafafa;
+}
+
+.tour-heading {
+  text-align: center;
+}
+
+.tour-heading > h1 {
+  font-size: 3rem;
+}
+
+.available-tickets {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
+}
+
+.tickets-per-month > * {
+  margin: 1rem;
+}
+
+.tickets-in-hand > * {
+  margin: 1rem;
+}
+
+.sold-out {
+  background-color: #fafafa;
+  border-radius: 50%;
+  color: #030303;
+  padding: 0.32rem;
+}
+
+.remaining-tickets {
+  background-color: #fc0808;
+  border-radius: 50%;
+  color: #fafafa;
+  padding: 0.32rem;
+  text-align: center;
+}
+/* Tour Section End */
+
+/* Show Date and Place Start */
+.show-times {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.show {
+  flex: 1;
+}
+
+.show-cards {
+  flex: 1 1 200px;
+  background-color: white;
+  color: #030303;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+.show-cards > img {
+  width: 100%;
+  height: 250px;
+}
+
+.show-cards > img:hover {
+  opacity: 0.7;
+}
+
+.show-cards > *:not(img) {
+  margin: 0.75rem 0.5rem;
+}
+
+.card-btn > button {
+  padding: 00.5rem 1rem;
+  background-color: #030303;
+  color: #fafafa;
+  margin-bottom: 0.75rem;
+  border: none;
+  border-radius: 0.32rem;
+}
+
+.card-btn > button:hover {
+  background-color: lightgray;
+  color: #030303;
+}
+/* Show Date and Place End*/
+
+/* Contact Section Start */
+.contact-section {
+  padding: 5rem;
+  /* width: 1000px; */
+  background-color: #fafafa;
+  margin: 0 auto;
+}
+
+.contact-heading {
+  text-align: center;
+}
+
+.contact-heading > h1 {
+  font-size: 3rem;
+}
+
+.contact-info {
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.fas {
+  margin: 0.75rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  margin-bottom: 0.32rem;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.form-btn {
+  padding: 00.5rem 2rem;
+  background-color: #030303;
+  color: #fafafa;
+  margin-bottom: 0.75rem;
+  border: none;
+  border-radius: 0.32rem;
+}
+
+.form-btn:hover {
+  background-color: lightgray;
+  color: #030303;
+}
+
+/* Contact Section End */
+
+/* Map */
+.map {
+  width: 100%;
+  height: auto;
+}
+
+.map > img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Footer */
+
+.footer-container {
+  background-color: #fafafa;
+}
+
+.footer {
+  padding: 5rem 0;
+}
+
+.social-media-icons {
+  font-size: 25px;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.social-media-icons i:hover {
+  opacity: 0.5;
+}
+
+.copy-right {
+  font-size: 18px;
+  text-align: center !important;
+  padding-top: 15px;
+}
