@@ -8,7 +8,7 @@ Here is the Desktop and Mobile preview for you.
 
 Desktop:
 
-
+![Band Website Desktop](https://user-images.githubusercontent.com/35150718/143216559-11ddcd1d-7b0b-49e7-993e-d82784ae2288.png)
 
 Mobile: 
 
